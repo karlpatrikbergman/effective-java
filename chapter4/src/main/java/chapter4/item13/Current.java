@@ -19,7 +19,7 @@ class Current {
         return c.get();
     }
 
-    public static Current of() {
+    static Current of() {
         return new Current();
     }
 }
