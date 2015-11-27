@@ -1,0 +1,4 @@
+rootProject.name = 'effective-java'
+include 'chapter1'
+include 'chapter4'
+
