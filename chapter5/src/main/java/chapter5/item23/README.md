@@ -1,0 +1,2 @@
+In summary, using raw types can lead to exceptions at runtime, so don’t usethem in new code. 
+They are provided only for compatibility and interoperabilitywith legacy code that predates the introduction of generics.
