@@ -7,7 +7,7 @@ import chapter4.item13.Radio;
  * Transistor and Current classes have access level package-private, and are therefore not accessible
  * outside their package. Therefore Transistor and Current is "encapsulated" and hidden from classes using Radio.
  */
-public class CurrentAndTransistorNotAccessibleOutsideTheirPackageTest {
+class CurrentAndTransistorNotAccessibleOutsideTheirPackageTest {
 
     //Transistor is not accessible
     //Transistor transistor;

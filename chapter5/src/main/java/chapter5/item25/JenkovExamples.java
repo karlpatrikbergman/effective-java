@@ -9,12 +9,12 @@ class JenkovExamples {
             return "Jabadabadoo";
         }
     }
-    class B extends A { }
-    class C extends A { }
+    private class B extends A { }
+    private class C extends A { }
 
-    final List<A> listOfA = new ArrayList();
-    final List<B> listOfB = new ArrayList();
-    final List<C> listOfC = new ArrayList();
+    private final List<A> listOfA = new ArrayList<>();
+    private final List<B> listOfB = new ArrayList<>();
+    private final List<C> listOfC = new ArrayList<>();
 
 //    List<?>           list1 = new ArrayList<A>();
 //    List<? extends A> list2 = new ArrayList<A>();
@@ -32,7 +32,7 @@ class JenkovExamples {
         processElementsUknownWildcard(listOfB);
         processElementsUknownWildcard(listOfC);
     }
-    void processElementsUknownWildcard(List<?> elements){
+    private void processElementsUknownWildcard(List<?> elements){
         elements.forEach(System.out::println);
         //Won't compile
         //elements.forEach(item -> System.out.println(item.getValue()));
@@ -47,7 +47,7 @@ class JenkovExamples {
         processElementsExtendsWildcard(listOfB);
         processElementsExtendsWildcard(listOfC);
     }
-    public void processElementsExtendsWildcard(List<? extends A> elements){
+    private void processElementsExtendsWildcard(List<? extends A> elements){
         elements.forEach(System.out::println);
         //Does compile!
         elements.forEach(item -> System.out.println(item.getValue()));

@@ -8,7 +8,7 @@ import java.util.Set;
 class ForwardingSet<E> implements Set<E> {
     private final Set<E> s;
 
-    public ForwardingSet(Set<E> s) {
+    ForwardingSet(Set<E> s) {
         this.s = s;
     }
 

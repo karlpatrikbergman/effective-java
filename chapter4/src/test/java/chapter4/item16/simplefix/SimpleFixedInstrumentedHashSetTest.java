@@ -10,7 +10,7 @@ public class SimpleFixedInstrumentedHashSetTest {
 
     @Test
     public void getAddCount() {
-        SimpleFixedInstrumentedHashSet<String> s = new SimpleFixedInstrumentedHashSet<String>();
+        SimpleFixedInstrumentedHashSet<String> s = new SimpleFixedInstrumentedHashSet<>();
         s.addAll(Arrays.asList("Snap", "Crackle", "Pop"));
        assertEquals(3, s.getAddCount());
     }

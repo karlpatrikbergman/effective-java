@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Current is available for test since it has access level package-private
  */
 public class CurrentTest {
-    Current current;
+    private Current current;
 
     @Before
     public void setup() {

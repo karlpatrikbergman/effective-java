@@ -7,11 +7,12 @@ import java.util.HashSet;
 
 import static org.junit.Assert.assertEquals;
 
+@SuppressWarnings("unchecked")
 public class InstrumentedSetTest {
 
     @Test
     public void getAddCount() {
-        InstrumentedSet<String> s = new InstrumentedSet(new HashSet());
+        InstrumentedSet<String> s = new InstrumentedSet(new HashSet<String>());
         s.addAll(Arrays.asList("Snap", "Crackle", "Pop"));
         assertEquals(3, s.getAddCount());
     }

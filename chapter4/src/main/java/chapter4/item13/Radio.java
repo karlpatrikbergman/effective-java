@@ -2,10 +2,11 @@ package chapter4.item13;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+@SuppressWarnings("ConstantConditions")
 public class Radio {
 
     private final Transistor transistor;
-    private AtomicBoolean isOn;
+    private final AtomicBoolean isOn;
 
     private Radio(int transistorFactor) {
         transistor = Transistor.builder()

@@ -8,7 +8,7 @@ package chapter4.item17.broken;
 
 
 class RockBand extends Band {
-    final int rockFactor;
+    private final int rockFactor;
 
     RockBand(int rockFactor) {
         this.rockFactor = rockFactor;

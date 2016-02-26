@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unchecked")
 class DontUseRawTypesInNewCode {
 
     /**
@@ -26,7 +27,7 @@ class DontUseRawTypesInNewCode {
         //This is dangerous.
         // You can put any element into a collection with a raw type, easily corrupting the collection’s type invariant
         Set set1 = new HashSet<>();
-        set1.add(new Integer(1));
+        set1.add(1);
         Set set2 = new HashSet<>();
         set2.add("A String");
         Set commonItems = rawGetCommonItems(set1, set2);
@@ -52,18 +53,17 @@ class DontUseRawTypesInNewCode {
     /**
      * Don't do this
      */
-    static Set rawGetCommonItems(Set set1, Set set2) {
+    private static Set rawGetCommonItems(Set set1, Set set2) {
         Set commonMembers = new HashSet<>();
-        set1.stream().filter(member -> set2.contains(member)).forEach(commonMembers::add);
+        set1.stream().filter(set2::contains).forEach(commonMembers::add);
         return commonMembers;
     }
 
     /**
      * Do this instead
      */
-    static Set<?> wildcardGetCommonItems(Set<?> set1, Set<?> set2) {
-        Set commonMembers = set1.stream().filter(member -> set2.contains(member)).collect(Collectors.toSet());
-        return commonMembers;
+    private static Set<?> wildcardGetCommonItems(Set<?> set1, Set<?> set2) {
+        return set1.stream().filter(set2::contains).collect(Collectors.toSet());
     }
 
 }

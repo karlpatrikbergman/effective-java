@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
  * Transistor and Current classes have access level package-private, and are therefore not accessible
  * outside their package.
  */
+@SuppressWarnings("ALL")
 public class RadioTest {
 
     //Transistor is not accessible

@@ -14,6 +14,7 @@ import java.util.List;
  * reified = förtingligad
  */
 
+@SuppressWarnings("ALL")
 class PreferListsToArrays {
 
     class Figure {}
