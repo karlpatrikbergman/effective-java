@@ -1,4 +1,8 @@
 package chapter7.item41;
 
-public class Band {
+abstract class Band {
+
+    String getType() {
+        return "Uknown type";
+    }
 }

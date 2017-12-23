@@ -1,4 +1,10 @@
 package chapter7.item41;
 
-public class DiscoBand {
+class DiscoBand extends Band {
+
+    @Override
+    String getType() {
+        return DiscoBand.class.getSimpleName();
+    }
 }
+

@@ -1,4 +1,9 @@
 package chapter7.item41;
 
-public class RockBand {
+class RockBand extends Band {
+
+    @Override
+    String getType() {
+        return RockBand.class.getSimpleName();
+    }
 }

@@ -28,11 +28,16 @@ public class OverloadAndOverrideTest {
     /**
      * If an instance method is overridden in a subclass and this method is invoked on an instance of the subclass, the
      * subclass’s overriding method executes, regardless of the compile-time type of the subclass instance.
+     *
+     * The compile-time type of an object has no effect on which method is executed when an overridden method is invoked;
+     * the “most specific” overriding method always gets executed. Compare this to overloading, where the runtime type
+     * of an object has no effect on which overload- ing is executed; the selection is made at compile time, based
+     * entirely on the compile-time types of the parameters.
      */
     @Test
     public void tryOverridenMethods() {
         bands.stream()
-                .map(Band::getType)
+                .map(bandClassifier::classifyUsingOvverride)
                 .forEach(System.out::println);
     }
 }
